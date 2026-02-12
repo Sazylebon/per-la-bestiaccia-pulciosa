@@ -1,0 +1,61 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Text */
+h1 {
+  font-size: 4em;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out forwards;
+  opacity: 0;
+}
+
+/* Heart Animation */
+.heart {
+  color: #ff5a5f;
+  display: inline-block;
+  animation: pulse 1s infinite;
+}
+
+/* Message Text */
+.message {
+  font-size: 1.5em;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
